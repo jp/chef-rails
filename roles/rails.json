@@ -1,0 +1,10 @@
+{
+  "name": "rails",
+  "chef_type": "role",
+  "description": "Rails",
+  "run_list": [
+    "role[ruby]"
+  ],
+  "default_attributes": {},
+  "override_attributes": {}
+}
