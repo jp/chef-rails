@@ -8,8 +8,6 @@
     "recipe[rbenv::user]",
     "recipe[rbenv]"
   ],
-  "default_attributes": {
-    },
-    "override_attributes": {
-    }
-  }
+  "default_attributes": {},
+  "override_attributes": {}
+}
