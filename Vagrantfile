@@ -42,26 +42,26 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # End chef
  
   # Begin rails
-  config.vm.define "master" do |master_config|
-    master_config.vm.hostname = "master"
-    master_config.vm.provision "shell", inline: $script
-    master_config.vm.box = "precise64"
+  config.vm.define "rails" do |rails_config|
+    rails_config.vm.hostname = "rails"
+    rails_config.vm.provision "shell", inline: $script
+    rails_config.vm.box = "precise64"
     # eth1 configured in the 192.168.236.0/24 network
-    master_config.vm.network "private_network", ip: "192.168.236.11"
-    master_config.vm.provider "vmware_workstation" do |v|
+    rails_config.vm.network "private_network", ip: "192.168.236.11"
+    rails_config.vm.provider "vmware_workstation" do |v|
         v.vmx["memsize"] = "2048"
         v.vmx["numvcpus"] = "2"
     end
  
-    master_config.vm.provider "vmware_fusion" do |v|
+    rails_config.vm.provider "vmware_fusion" do |v|
         v.vmx["memsize"] = "2048"
         v.vmx["numvcpus"] = "2"
     end
-    master_config.vm.provider "virtualbox" do |v|
+    rails_config.vm.provider "virtualbox" do |v|
         v.customize ["modifyvm", :id, "--memory", "2048"]
         v.customize ["modifyvm", :id, "--cpus", "2"]
     end
-    master_config.vm.network "forwarded_port", guest: 443, host: 1081
+    rails_config.vm.network "forwarded_port", guest: 443, host: 1081
   end
   # End rails
 end
