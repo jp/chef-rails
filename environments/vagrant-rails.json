@@ -6,23 +6,16 @@
   "chef_type": "environment",
   "default_attributes": {},
   "override_attributes": {
+    "ruby_build":{
+      "upgrade":"sync"
+    },
     "rbenv": {
-      "user_installs": [
-        {
-          "user": "vagrant",
-          "rubies": [
-          "2.1.0"
-          ],
-          "global": "2.1.0",
-          "gems": {
-            "2.1.0": [
-              {
-                "name": "bundler"
-              }
-            ]
-          }
-        }
-      ]
+      "rubies":["2.1.0"],
+      "gems":{
+        "2.1.0":[
+          {"name":"bundler"}
+        ]
+      }
     }
   }
 }
