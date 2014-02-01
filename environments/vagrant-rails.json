@@ -1,16 +1,28 @@
 {
   "name": "vagrant-rails",
   "description": "",
-  "cookbook_versions": {
-  },
+  "cookbook_versions": {},
   "json_class": "Chef::Environment",
   "chef_type": "environment",
-  "default_attributes": {
-  },
+  "default_attributes": {},
   "override_attributes": {
-    "hortonworks_hdp": {
-      "hadoop_master_ip": "",
-      "hadoop_network_interface": "eth1"
+    "rbenv": {
+      "user_installs": [
+        {
+          "user": "vagrant",
+          "rubies": [
+          "2.1.0"
+          ],
+          "global": "2.1.0",
+          "gems": {
+            "2.1.0": [
+              {
+                "name": "bundler"
+              }
+            ]
+          }
+        }
+      ]
     }
   }
 }
