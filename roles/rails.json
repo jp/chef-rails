@@ -1,0 +1,13 @@
+{
+  "name": "rails",
+  "chef_type": "role",
+  "description": "Rails",
+  "run_list": [
+    "recipe[ruby_build]",
+    "recipe[rbenv]"
+  ],
+  "default_attributes": {
+    },
+    "override_attributes": {
+    }
+  }
