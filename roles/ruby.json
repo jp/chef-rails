@@ -1,9 +1,11 @@
 {
-  "name": "rails",
+  "name": "ruby",
   "chef_type": "role",
-  "description": "Rails",
+  "description": "Ruby with rbenv",
   "run_list": [
     "recipe[ruby_build]",
+    "recipe[rbenv::user_install]",
+    "recipe[rbenv::user]",
     "recipe[rbenv]"
   ],
   "default_attributes": {
