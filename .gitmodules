@@ -4,6 +4,3 @@
 [submodule "cookbooks/ruby_build"]
 	path = cookbooks/ruby_build
 	url = https://github.com/fnichol/chef-ruby_build
-[submodule "cookbooks/openssl"]
-	path = cookbooks/openssl
-	url = git@github.com:opscode-cookbooks/openssl.git

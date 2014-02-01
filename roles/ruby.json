@@ -3,7 +3,6 @@
   "chef_type": "role",
   "description": "Ruby with rbenv",
   "run_list": [
-    "recipe[openssl]",
     "recipe[ruby_build]",
     "recipe[rbenv::user_install]",
     "recipe[rbenv::user]",
