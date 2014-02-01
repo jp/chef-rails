@@ -22,8 +22,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define "chef" do |chef_config|
     chef_config.vm.hostname = "chef"
     chef_config.vm.provision "shell", inline: $script
-    # eth1 configured in the 192.168.236.0/24 network
-    chef_config.vm.network "private_network", ip: "192.168.236.10"
+    # eth1 configured in the 192.168.10.0/24 network
+    chef_config.vm.network "private_network", ip: "192.168.10.10"
     chef_config.vm.provider "vmware_workstation" do |v|
         v.vmx["memsize"] = "2048"
         v.vmx["numvcpus"] = "1"
@@ -46,8 +46,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     rails_config.vm.hostname = "rails"
     rails_config.vm.provision "shell", inline: $script
     rails_config.vm.box = "precise64"
-    # eth1 configured in the 192.168.236.0/24 network
-    rails_config.vm.network "private_network", ip: "192.168.236.11"
+    # eth1 configured in the 192.168.10.0/24 network
+    rails_config.vm.network "private_network", ip: "192.168.10.11"
     rails_config.vm.provider "vmware_workstation" do |v|
         v.vmx["memsize"] = "2048"
         v.vmx["numvcpus"] = "2"
