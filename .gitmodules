@@ -13,3 +13,6 @@
 [submodule "cookbooks/postgresql"]
 	path = cookbooks/postgresql
 	url = https://github.com/hw-cookbooks/postgresql
+[submodule "cookbooks/bluepill"]
+	path = cookbooks/bluepill
+	url = git@github.com:opscode-cookbooks/bluepill.git
