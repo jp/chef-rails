@@ -16,3 +16,6 @@
 [submodule "cookbooks/bluepill"]
 	path = cookbooks/bluepill
 	url = git@github.com:opscode-cookbooks/bluepill.git
+[submodule "cookbooks/rsyslog"]
+	path = cookbooks/rsyslog
+	url = git@github.com:opscode-cookbooks/rsyslog.git
