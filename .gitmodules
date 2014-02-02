@@ -4,3 +4,6 @@
 [submodule "cookbooks/ruby_build"]
 	path = cookbooks/ruby_build
 	url = https://github.com/fnichol/chef-ruby_build
+[submodule "cookbooks/apt"]
+	path = cookbooks/apt
+	url = git@github.com:opscode-cookbooks/apt.git
