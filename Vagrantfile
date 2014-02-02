@@ -61,7 +61,30 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         v.customize ["modifyvm", :id, "--memory", "2048"]
         v.customize ["modifyvm", :id, "--cpus", "2"]
     end
-    rails_config.vm.network "forwarded_port", guest: 443, host: 1081
   end
   # End rails
+
+    # Begin railscentos
+  config.vm.define "railscentos" do |railscentos_config|
+    railscentos_config.vm.hostname = "railscentos"
+    railscentos_config.vm.provision "shell", inline: $script
+    railscentos_config.vm.box = "centos"
+    railscentos_config.vm.box_url = "https://github.com/2creatives/vagrant-centos/releases/download/v6.5.1/centos65-x86_64-20131205.box"
+    # eth1 configured in the 192.168.10.0/24 network
+    railscentos_config.vm.network "private_network", ip: "192.168.10.12"
+    railscentos_config.vm.provider "vmware_workstation" do |v|
+        v.vmx["memsize"] = "2048"
+        v.vmx["numvcpus"] = "2"
+    end
+
+    railscentos_config.vm.provider "vmware_fusion" do |v|
+        v.vmx["memsize"] = "2048"
+        v.vmx["numvcpus"] = "2"
+    end
+    railscentos_config.vm.provider "virtualbox" do |v|
+        v.customize ["modifyvm", :id, "--memory", "2048"]
+        v.customize ["modifyvm", :id, "--cpus", "2"]
+    end
+  end
+  # End railscentos
 end
