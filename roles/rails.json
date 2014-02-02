@@ -3,8 +3,27 @@
   "chef_type": "role",
   "description": "Rails",
   "run_list": [
-    "role[ruby]"
+    "role[ruby]",
+    "recipe[nginx]",
+    "recipe[postgresql]"
   ],
   "default_attributes": {},
-  "override_attributes": {}
+  "override_attributes": {
+    "postgresql": {
+      "config":{
+        "listen_addresses":"localhost"
+        },
+      "password": {
+        "postgres": "iloverandompasswordsbutthiswilldo"
+      }
+    },
+    "nginx": {
+      "default_site_enabled": false,
+      "workers": 4,
+      "init_style": "init",
+      "source": {
+        "prefix": "/opt/nginx"
+      }
+    }
+  }
 }

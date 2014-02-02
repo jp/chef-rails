@@ -10,5 +10,15 @@
     "recipe[rbenv]"
   ],
   "default_attributes": {},
-  "override_attributes": {}
+  "override_attributes": {
+    "rbenv": {
+      "rubies":["2.1.0"],
+      "gems":{
+        "2.1.0":[
+          {"name":"bundler"}
+        ]
+      },
+      "global":"2.1.0"
+    }
+  }
 }
