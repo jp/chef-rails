@@ -5,7 +5,8 @@
   "run_list": [
     "role[ruby]",
     "recipe[nginx]",
-    "recipe[postgresql]"
+    "recipe[postgresql::server]",
+    "recipe[postgresql::client]"
   ],
   "default_attributes": {},
   "override_attributes": {
