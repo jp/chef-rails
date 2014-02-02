@@ -3,7 +3,7 @@
   "chef_type": "role",
   "description": "Ruby with rbenv",
   "run_list": [
-    "recipe[apt]",
+    "role[base-components]",
     "recipe[ruby_build]",
     "recipe[rbenv::system_install]",
     "recipe[rbenv::system]",
