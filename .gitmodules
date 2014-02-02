@@ -25,3 +25,6 @@
 [submodule "cookbooks/ohai"]
 	path = cookbooks/ohai
 	url = git@github.com:opscode-cookbooks/ohai.git
+[submodule "runit"]
+	path = runit
+	url = git@github.com:hw-cookbooks/runit.git
