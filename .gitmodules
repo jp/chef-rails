@@ -34,3 +34,6 @@
 [submodule "cookbooks/yum-epel"]
 	path = cookbooks/yum-epel
 	url = git@github.com:opscode-cookbooks/yum-epel.git
+[submodule "cookbooks/rvm"]
+	path = cookbooks/rvm
+	url = git@github.com:fnichol/chef-rvm.git

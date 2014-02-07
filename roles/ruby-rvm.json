@@ -1,0 +1,16 @@
+{
+  "name": "ruby-rvm",
+  "chef_type": "role",
+  "description": "Ruby with rbenv",
+  "run_list": [
+    "recipe[apt]",
+    "recipe[rvm::system]"
+  ],
+  "default_attributes": {},
+  "override_attributes": {
+    "rvm": {
+      "rubies":["2.1.0"],
+      "default_ruby":"2.1.0"
+    }
+  }
+}

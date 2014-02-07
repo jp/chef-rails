@@ -1,5 +1,5 @@
 {
-  "name": "ruby",
+  "name": "ruby-rbenv",
   "chef_type": "role",
   "description": "Ruby with rbenv",
   "run_list": [
