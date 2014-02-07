@@ -3,7 +3,7 @@
   "chef_type": "role",
   "description": "Rails",
   "run_list": [
-    "role[ruby-rbenv]",
+    "role[ruby-rvm]",
     "recipe[nginx]",
     "recipe[postgresql::server]",
     "recipe[postgresql::client]"
