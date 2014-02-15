@@ -10,7 +10,8 @@
   "override_attributes": {
     "rvm": {
       "rubies":["2.1.0"],
-      "default_ruby":"2.1.0"
+      "default_ruby":"2.1.0",
+      "global_gems":[{"name":"passenger"}]
       }
   }
 }
