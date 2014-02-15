@@ -1,0 +1,24 @@
+{
+  "name": "rbenv-jruby",
+  "chef_type": "role",
+  "description": "JRuby with rbenv",
+  "run_list": [
+    "recipe[apt]",
+    "recipe[ruby_build]",
+    "recipe[rbenv::system_install]",
+    "recipe[rbenv::system]",
+    "recipe[rbenv]"
+  ],
+  "default_attributes": {},
+  "override_attributes": {
+    "rbenv": {
+      "rubies":["jruby-1.7.9"],
+      "gems":{
+        "jruby-1.7.9":[
+          {"name":"bundler"}
+        ]
+      },
+      "global":"jruby-1.7.9"
+    }
+  }
+}
