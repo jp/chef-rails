@@ -1,7 +1,7 @@
 {
-  "name": "rvm-ruby",
+  "name": "rvm-jruby",
   "chef_type": "role",
-  "description": "Ruby with rbenv",
+  "description": "JRuby with rvm",
   "run_list": [
     "recipe[apt]",
     "recipe[rvm::system]"
@@ -9,9 +9,8 @@
   "default_attributes": {},
   "override_attributes": {
     "rvm": {
-      "rubies":["2.1.0"],
-      "default_ruby":"2.1.0",
-      "global_gems":[{"name":"passenger"}]
+      "rubies":["jruby-1.7.9"],
+      "default_ruby":"jruby-1.7.9"
       }
   }
 }

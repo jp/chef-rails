@@ -1,7 +1,7 @@
 {
   "name": "rvm-ruby",
   "chef_type": "role",
-  "description": "Ruby with rbenv",
+  "description": "Ruby with rvm",
   "run_list": [
     "recipe[apt]",
     "recipe[rvm::system]"
