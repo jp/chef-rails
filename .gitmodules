@@ -40,3 +40,6 @@
 [submodule "cookbooks/chef_gem"]
 	path = cookbooks/chef_gem
 	url = git@github.com:hw-cookbooks/chef_gem.git
+[submodule "cookbooks/nodejs"]
+	path = cookbooks/nodejs
+	url = git@github.com:mdxp/nodejs-cookbook.git
