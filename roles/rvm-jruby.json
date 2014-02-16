@@ -9,8 +9,8 @@
   "default_attributes": {},
   "override_attributes": {
     "rvm": {
-      "rubies":["jruby-1.7.9"],
-      "default_ruby":"jruby-1.7.9"
+      "rubies":["jruby-1.7.10"],
+      "default_ruby":"jruby-1.7.10"
       }
   }
 }

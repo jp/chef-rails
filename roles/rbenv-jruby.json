@@ -12,13 +12,13 @@
   "default_attributes": {},
   "override_attributes": {
     "rbenv": {
-      "rubies":["jruby-1.7.9"],
+      "rubies":["jruby-1.7.10"],
       "gems":{
-        "jruby-1.7.9":[
+        "jruby-1.7.10":[
           {"name":"bundler"}
         ]
       },
-      "global":"jruby-1.7.9"
+      "global":"jruby-1.7.10"
     }
   }
 }
