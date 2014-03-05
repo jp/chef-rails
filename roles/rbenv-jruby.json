@@ -5,6 +5,7 @@
   "run_list": [
     "recipe[apt]",
     "recipe[ruby_build]",
+    "role[java]",
     "recipe[rbenv::system_install]",
     "recipe[rbenv::system]",
     "recipe[rbenv]"

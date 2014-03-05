@@ -1,0 +1,14 @@
+{
+  "name": "java",
+  "chef_type": "role",
+  "description": "JRuby with rbenv",
+  "run_list": [
+    "recipe[java]"
+  ],
+  "default_attributes": {},
+  "override_attributes": {
+    "java": {
+      "jdk_version":"7"
+    }
+  }
+}
