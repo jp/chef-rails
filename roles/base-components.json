@@ -1,0 +1,12 @@
+{
+  "name": "base-components",
+  "chef_type": "role",
+  "description": "Install base components on server",
+  "run_list": [
+    "recipe[ntp]"
+  ],
+  "default_attributes": {},
+  "override_attributes": {
+    "ntp": {}
+  }
+}

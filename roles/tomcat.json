@@ -1,0 +1,16 @@
+{
+  "name": "tomcat",
+  "chef_type": "role",
+  "description": "install tomcat",
+  "run_list": [
+    "recipe[tomcat]"
+  ],
+  "default_attributes": {},
+  "override_attributes": {
+    "tomcat":{
+      "port":"8000",
+      "base_version":"6",
+      "keytool":"/usr/bin/keytool"
+    }
+  }
+}

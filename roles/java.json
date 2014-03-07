@@ -1,7 +1,7 @@
 {
   "name": "java",
   "chef_type": "role",
-  "description": "JRuby with rbenv",
+  "description": "install JDK 7",
   "run_list": [
     "recipe[java]"
   ],

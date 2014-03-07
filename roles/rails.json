@@ -1,9 +1,9 @@
 {
   "name": "rails",
   "chef_type": "role",
-  "description": "Rails",
+  "description": "Rails Postgres and Nginx",
   "run_list": [
-    "role[rvm-ruby]",
+    "role[rbenv-ruby]",
     "recipe[nginx]",
     "recipe[postgresql::server]",
     "recipe[postgresql::client]"

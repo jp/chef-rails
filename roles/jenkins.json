@@ -1,0 +1,25 @@
+{
+  "name": "jenkins",
+  "chef_type": "role",
+  "description": "install Jenkins",
+  "run_list": [
+    "recipe[jenkins]"
+  ],
+  "default_attributes": {},
+  "override_attributes": {
+    "jenkins":{
+      "mirror":"https://updates.jenkins-ci.org",
+      "server":{
+        "port":"8081",
+        "plugins":[
+          "analysis-core",
+          "analysis-collector",
+          "chucknorris",
+          "findbugs",
+          "regression-report-plugin",
+          "violations"
+        ]
+      }
+    }
+  }
+}
