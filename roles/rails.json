@@ -5,6 +5,7 @@
   "run_list": [
     "role[rbenv-ruby]",
     "recipe[nginx]",
+    "recipe[nodejs]",
     "recipe[postgresql::server]",
     "recipe[postgresql::client]"
   ],
