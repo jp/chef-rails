@@ -1,5 +1,6 @@
 site :opscode
 
+cookbook 'iptables-ng'
 cookbook 'java'
 cookbook 'jenkins', github: 'fnichol/chef-jenkins'
 cookbook 'nginx'

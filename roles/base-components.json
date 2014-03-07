@@ -3,10 +3,26 @@
   "chef_type": "role",
   "description": "Install base components on server",
   "run_list": [
-    "recipe[ntp]"
+    "recipe[ntp]",
+    "recipe[iptables-ng]"
   ],
   "default_attributes": {},
   "override_attributes": {
-    "ntp": {}
+    "ntp": {},
+    "iptables-ng":{
+      "rules":{
+        "filter":{
+          "input":{
+            "default": "DROP [0:0]",
+            "ssh":{
+              "rule":"--protocol tcp --dport 22 --match state --state NEW --jump ACCEPT"
+            },
+            "http":{
+              "rule":"--protocol tcp --dport 80 --match state --state NEW --jump ACCEPT"
+            }
+          }
+        }
+      }
+    }
   }
 }

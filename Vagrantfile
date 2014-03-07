@@ -36,7 +36,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         v.customize ["modifyvm", :id, "--memory", "2048"]
         v.customize ["modifyvm", :id, "--cpus", "1"]
     end
-    chef_config.vm.network "forwarded_port", guest: 443, host: 1080
 
   end
   # End chef
